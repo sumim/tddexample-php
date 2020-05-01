@@ -7,9 +7,9 @@ class Product
 
     }
 
-    public function getCategory(): Category
+    public function getCategory(): ?Category
     {
-        return new Category();
+        return null;
     }
 
 }
