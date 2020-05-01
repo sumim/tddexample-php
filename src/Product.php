@@ -2,14 +2,16 @@
 
 class Product
 {
-    public function setCategory(?Category $category): void
-    {
+    private Category $category;
 
+    public function setCategory(Category $category): void
+    {
+        $this->category = $category;
     }
 
-    public function getCategory(): ?Category
+    public function getCategory(): Category
     {
-        return null;
+        return $this->category;
     }
 
 }
