@@ -7,6 +7,7 @@ class Product
     public function setCategory(Category $category): void
     {
         $this->category = $category;
+        $category->add_product($this);
     }
 
     public function getCategory(): Category
