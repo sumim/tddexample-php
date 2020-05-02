@@ -10,4 +10,12 @@ class MyTest extends TestCase
         $pc->setCategory($electronic);
         $this->assertSame($electronic, $pc->getCategory());
     }
+
+    public function test2()
+    {
+        $pc = new Product();
+        $electronic = new Category();
+        $pc->setCategory($electronic);
+        $this->assertTrue($electronic->contains($pc));
+    }
 }
